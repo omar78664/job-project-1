@@ -1,0 +1,723 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #d3d3d3;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #d3d3d3;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px, 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.logo .logo-color {
+  color: #0284d0;
+}
+
+.main-card {
+  margin-left: 5px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  justify-content: space-between;
+  width: 100%;
+  height: 99vh;
+  top: 0;
+  left: 0;
+  border-radius: 20px 0px 0px 20px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.logo ul {
+  margin-top: 10px;
+}
+
+.logo ul li {
+  padding: 5px;
+  text-align: center;
+}
+
+.logo ul li :hover {
+  cursor: pointer;
+  color: #0284d0;
+}
+
+.social ul {
+  margin-top: -100px;
+}
+
+.social ul li {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.social ul li :hover {
+  color: #0284d0;
+}
+
+.social ul li a.current {
+  color: #f3f3f3f3;
+  background-color: #0284d0;
+  padding: 5px 8px;
+  border-radius: 7px;
+}
+
+.login ul {
+  margin-bottom: 10px;
+}
+
+.login ul li {
+  padding: 5px;
+  text-align: center;
+}
+
+.login ul li :hover {
+  color: #0284d0;
+}
+
+.about {
+  background: #f5f5f5;
+  top: 0;
+  width: 25%;
+  height: 99vh;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.profile-pic .mike {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.profile-pic .mike p {
+  font-size: 10px;
+}
+
+.profile-pic .mike h1 {
+  font-weight: bolder;
+  font-size: 22px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.profile-pic img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.money-all {
+  justify-content: center;
+  text-align: left;
+  display: grid;
+  margin-top: 35px;
+  margin-left: -30px;
+}
+
+.money-all h2 {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: auto;
+  margin-bottom: 10px;
+}
+
+.money-all .money-1 .amount-1 {
+  font-weight: bolder;
+  font-size: 25px;
+  font-family: sans-serif;
+}
+.money-all .money-2 .amount-2 {
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+.money-all .money-3 .amount-3 {
+  font-weight: bolder;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+.money-all .amount-11 {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+}
+
+.money-all .money-1 {
+  margin-bottom: 10px;
+}
+.money-all .money-2 {
+  margin-bottom: 10px;
+}
+.money-all .money-3 {
+  margin-bottom: 10px;
+}
+
+.money-all .button .btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 21px;
+  color: #fff;
+  background-color: #0502ce;
+  border: none;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+.content {
+  justify-content: center;
+  text-align: left;
+  display: grid;
+  margin-top: 35px;
+}
+
+.content h2 {
+  font-weight: bold;
+  font-size: 12px;
+  font-family: auto;
+  margin-bottom: 10px;
+}
+
+.content .date .date-1 {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+}
+
+.content .date .withdrawal {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.content .date {
+  border-bottom: #d8d6d6 solid 1px;
+  margin-bottom: 10px;
+}
+
+.retirement {
+  background: #fff;
+  top: 0;
+  width: 47%;
+  height: 99vh;
+}
+
+.retirement .investment h3 {
+  font-size: 10px;
+  color: #0284d0;
+  margin-bottom: 3px;
+  font-weight: bolder;
+}
+
+.retirement .hero-content-section {
+  margin-top: 38px;
+  text-align: left;
+  padding: 0 60px;
+}
+
+.retirement .investment h1 {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.retirement .investment {
+  margin-bottom: 20px;
+}
+
+.retirement .retirement-investment {
+  display: flex;
+  text-align: left;
+}
+
+.retirement .retirement-investment .paisa {
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.retirement .retirement-investment .goal {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+  margin-bottom: 10px;
+}
+
+.retirement-investment-1 {
+  border-bottom: #0502ce solid 1px;
+  padding-right: 40px;
+}
+
+.retirement-investment-2,
+.retirement-investment-3 {
+  margin-left: 50px;
+  padding-right: 40px;
+  border-bottom: #0502ce solid 1px;
+}
+
+.chart-heading h1 {
+  font-size: 15px;
+  font-weight: bolder;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  margin-left: 55px;
+}
+
+.progress-bar-chart {
+  padding-left: 60px;
+}
+
+.progress-bar-heading {
+  margin-bottom: 15px;
+}
+
+.progress-bar-heading h3 {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.progress-bar-heading p {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+}
+
+.all-progress-bar-chart {
+  display: flex;
+}
+
+.first-progress-bar-underHeading {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.second-progress-bar-underHeading {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.skill {
+  width: 90px;
+  height: 90px;
+  /* background: cornflowerblue; */
+  position: relative;
+  margin-left: 40px;
+}
+
+.outer {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 9px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number {
+  font-weight: 600px;
+  color: #555;
+}
+
+circle {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 10px;
+  stroke-dasharray: 249;
+  stroke-dashoffset: 249;
+  animation: anim 2s linear forwards;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 54;
+  }
+}
+.skill-1 {
+  width: 90px;
+  height: 90px;
+  /* background: cornflowerblue; */
+  position: relative;
+  margin-left: 30px;
+}
+
+.outer-1 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 9px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner-1 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number-1 {
+  font-weight: 600px;
+  color: #555;
+}
+
+.circle-1 {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 10px;
+  stroke-dasharray: 249;
+  stroke-dashoffset: 249;
+  animation: anim1 2s linear forwards;
+}
+
+.svg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes anim1 {
+  100% {
+    stroke-dashoffset: 20;
+  }
+}
+.skill-2 {
+  width: 90px;
+  height: 90px;
+  /* background: cornflowerblue; */
+  position: relative;
+  margin-left: 30px;
+}
+
+.outer-2 {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 9px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.inner-2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+#number-2 {
+  font-weight: 600px;
+  color: #555;
+}
+
+.circle-2 {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 10px;
+  stroke-dasharray: 249;
+  stroke-dashoffset: 249;
+  animation: anim2 2s linear forwards;
+}
+
+.svg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes anim2 {
+  100% {
+    stroke-dashoffset: 102;
+  }
+}
+
+.age {
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.age-1 {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+  margin-bottom: 10px;
+}
+
+.age-top {
+  display: flex;
+  border-bottom: 1px solid #bebaba;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.salary {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.salary-1 {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+}
+
+.salary-top {
+  display: flex;
+  border-bottom: 1px solid #bebaba;
+  margin-bottom: 10px;
+  padding-right: 10px;
+}
+
+.gender {
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.gender-1 {
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+}
+
+.gender-top {
+  display: flex;
+}
+
+.last-section {
+  background-color: #fff;
+  width: 113%;
+  height: 99vh;
+  top: 0;
+  border-radius: 0px 20px 20px 0px;
+  padding-top: 38px;
+}
+
+.last-section .inside-card {
+  padding: 20px;
+}
+
+.last-card {
+  background: #f5f5f5;
+  width: 230px;
+  height: 410px;
+  border-radius: 15px;
+  margin-left: 30px;
+}
+
+.last-section .inside-card h3 {
+  font-weight: bolder;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.last-section .Employee-contribution h3 {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.last-section .Employee-contribution {
+  margin-bottom: 20px;
+}
+
+.last-section .Employee-contribution label {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.last-section .retirement-age label {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.last-section .retirement-age h3 {
+  font-weight: bolder;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.last-section .retirement-age {
+  border-bottom: 1px solid #cbc8c8;
+}
+
+.Employee-contribution .slider-1 .range-slider-1 {
+  -webkit-appearance: none;
+  outline: none;
+  width: 80%;
+  height: 3px;
+}
+.retirement-age .slider-2 .range-slider-2 {
+  -webkit-appearance: none;
+  outline: none;
+  width: 80%;
+  height: 3px;
+  background-color: #ebe8e8;
+  margin-bottom: 35px;
+}
+
+.inside-card .employee-contribution-2{
+  display: flex;
+  margin-top: 25px;
+}
+.inside-card .interest-rate{
+  display: flex;
+  margin-top: 5px
+}
+
+.inside-card .employee-contribution-2 h3 {
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.inside-card .employee-contribution-2 p{
+  font-weight: bolder;
+  font-size: 10px;
+  margin-left: 60px;
+}
+.inside-card .interest-rate h3 {
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+.inside-card .interest-rate p{
+  font-weight: bolder;
+  font-size: 10px;
+  margin-left: 109px;
+}
+
+.button-2{
+  padding: 13px;
+}
+
+.button-2 .btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 60px;
+  color: #fff;
+  background-color: #0502ce;
+  border: none;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.inside-card .docs h3{
+  font-weight: bolder;
+  font-size: 10px;
+  color: #0502ce;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.last-content-last{
+  margin-left: 32px;
+  border-left: 2px solid #0284d0;
+  margin-top: 20px;
+}
+
+.last-content-last .pakka-last{
+  margin-left: 30px;
+}
+
+.last-content-last .pakka-last .r-you h3{
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.last-content-last .pakka-last .housing h3{
+  font-weight: bolder;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.last-content-last .pakka-last .limited{
+  font-weight: bolder;
+  font-size: 10px;
+  color: #bebaba;
+  margin-top: 5px;
+}
+
+.last-content-last .pakka-last .last-link{
+  font-weight: bolder;
+  font-size: 10px;
+  color: #0284d0;
+  margin-top: 5px;
+}

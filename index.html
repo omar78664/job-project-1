@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/bbc9f3a3ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          [
+            "Genre",
+            "Employer k 73,500",
+            "Employee k 52,500",
+            "Mystery/Crime",
+            "General",
+            "Western",
+            "Literature",
+            { role: "annotation" },
+          ],
+          ["20", 5, 24, 20, 32, 18, 5, ""],
+          ["25", 8, 22, 23, 30, 16, 9, ""],
+          ["30", 11, 19, 29, 30, 12, 13, ""],
+          ["35", 14, 19, 29, 30, 12, 13, ""],
+          ["40", 17, 19, 29, 30, 12, 13, ""],
+          ["60", 20, 19, 29, 30, 12, 13, ""],
+          ["65", 23, 19, 29, 30, 12, 13, ""],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([
+          0,
+          1,
+          {
+            calc: "stringify",
+            sourceColumn: 1,
+            type: "string",
+            role: "annotation",
+          },
+          2,
+        ]);
+
+        var options = {
+          width: 600,
+          height: 200,
+          legend: { position: "top", maxLines: 3 },
+          bar: { groupWidth: "40%" },
+          isStacked: true,
+        };
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById("columnchart_values")
+        );
+        chart.draw(view, options);
+      }
+    </script>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="main-card">
+      <header>
+        <div id="navbar" class="navbar">
+          <div class="logo">
+            <ul>
+              <li>
+                <span class="logo-color"
+                  ><i class="fa-brands fa-twitter"></i
+                ></span>
+              </li>
+              <li><i class="fa-solid fa-magnifying-glass"></i></li>
+            </ul>
+          </div>
+          <div class="social">
+            <ul>
+              <li>
+                <a class="current" href="#"
+                  ><i class="fa-solid fa-house"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-list"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="login">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-regular fa-bell"></i></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-arrow-right-from-bracket"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
+    <section id="about" class="about">
+      <div class="hero-section">
+        <div class="profile-pic">
+          <img src="./img/tiger-g87cbd1faf_1280.jpg" alt="tiger" />
+          <div class="mike">
+            <h1>Hi Mike,</h1>
+            <p>welcome back.</p>
+          </div>
+        </div>
+      </div>
+      <div class="money-all">
+        <h2>Today</h2>
+        <div class="money-1">
+          <div class="amount-1">$19,892</div>
+          <div class="amount-11">Account Balance</div>
+        </div>
+        <div class="money-2">
+          <div class="amount-2">$4,000</div>
+          <div class="amount-11">Year-to-Date Contribution</div>
+        </div>
+        <div class="money-3">
+          <div class="amount-3">$1,892</div>
+          <div class="amount-11">Total Interest</div>
+        </div>
+        <div class="button">
+          <a href="#" class="btn"
+            >I want to <i class="fa-sharp fa-solid fa-caret-down"></i
+          ></a>
+        </div>
+      </div>
+      <div class="content">
+        <h2>Recent Transaction</h2>
+        <div class="date">
+          <div class="date-1">2020-08-07</div>
+          <div class="withdrawal">withdrawal transfer to bank-XXX11</div>
+        </div>
+        <div class="date">
+          <div class="date-1">2020-07-21</div>
+          <div class="withdrawal">withdrawal transfer to bank-XXX11</div>
+        </div>
+        <div class="date">
+          <div class="date-1">2020-07-16</div>
+          <div class="withdrawal">withdrawal transfer to bank-XXX11</div>
+        </div>
+      </div>
+    </section>
+    <section id="retirement" class="retirement">
+      <div class="hero-content-section">
+        <div class="investment">
+          <h3>Retirement Income</h3>
+          <h1>Starting Year 2056</h1>
+        </div>
+        <div class="retirement-investment">
+          <div class="retirement-investment-1">
+            <div class="paisa">$300,000</div>
+            <div class="goal">My Goal</div>
+          </div>
+          <div class="retirement-investment-2">
+            <div class="paisa">59%</div>
+            <div class="goal">Goal Achieved</div>
+          </div>
+          <div class="retirement-investment-3">
+            <div class="paisa">$300</div>
+            <div class="goal">Est. Monthly Income</div>
+          </div>
+        </div>
+      </div>
+      <div class="chart">
+        <div class="chart-heading">
+          <h1>Contibution Overtime</h1>
+        </div>
+        <div class="bar-chart">
+          <div
+            id="columnchart_values"
+            style="width: 900px; height: 200px"
+          ></div>
+        </div>
+      </div>
+      <div class="progress-bar-chart">
+        <div class="progress-bar-heading">
+          <h3>How do I compare to my peers?</h3>
+          <p>These numbers represent current goal achievement</p>
+        </div>
+        <div class="all-progress-bar-chart">
+          <div class="information">
+            <div class="age-top">
+              <span class="age">Age: &nbsp;&nbsp;</span
+              ><span class="age-1"
+                >Under 30 &nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i
+              ></span>
+            </div>
+            <div class="salary-top">
+              <span class="salary">Salary: &nbsp;&nbsp;</span> <br /><span
+                class="salary-1"
+                >k 20 - k 30 &nbsp;<i
+                  class="fa-sharp fa-solid fa-caret-down"
+                ></i
+              ></span>
+            </div>
+            <div class="gender-top">
+              <span class="gender">Gender: &nbsp;&nbsp;</span> <br /><span
+                class="gender-1"
+                >Male &nbsp;<i class="fa-sharp fa-solid fa-caret-down"></i
+              ></span>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="outer">
+              <div class="inner">
+                <div id="number"></div>
+              </div>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="90px"
+              height="90px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+              </defs>
+              <circle cx="45" cy="45" r="40" stroke-linecap="round" />
+            </svg>
+            <div class="first-progress-bar-underHeading">Average</div>
+          </div>
+          <div class="skill-1">
+            <div class="outer-1">
+              <div class="inner-1">
+                <div id="number-1"></div>
+              </div>
+            </div>
+            <svg
+              class="svg-1"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="90px"
+              height="90px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+              </defs>
+              <circle
+                class="circle-1"
+                cx="45"
+                cy="45"
+                r="40"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="second-progress-bar-underHeading">top</div>
+          </div>
+          <div class="skill-2">
+            <div class="outer-2">
+              <div class="inner-2">
+                <div id="number-2"></div>
+              </div>
+            </div>
+            <svg
+              class="svg-2"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              width="90px"
+              height="90px"
+            >
+              <defs>
+                <linearGradient id="GradientColor">
+                  <stop offset="0%" stop-color="#e91e63" />
+                  <stop offset="100%" stop-color="#673ab7" />
+                </linearGradient>
+              </defs>
+              <circle
+                class="circle-2"
+                cx="45"
+                cy="45"
+                r="40"
+                stroke-linecap="round"
+              />
+            </svg>
+            <div class="second-progress-bar-underHeading">Me</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="last-section">
+        <div class="last-card">
+          <div class="inside-card">
+            <h3>Retirement Strategy</h3>
+            <div class="Employee-contribution">
+              <h3>Employee Contribution</h3>
+              <div class="slider-1">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="12"
+                  class="range-slider-1"
+                  id="slider-1"
+                />
+                <label for="" class="label-right-1" id="label-1"></label>
+              </div>
+            </div>
+            <div class="retirement-age">
+              <h3>Retirement Age</h3>
+              <div class="slider-2">
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="65"
+                  class="range-slider-2"
+                  id="slider-2"
+                />
+                <label for="" class="label-right-2" id="label-2"></label>
+              </div>
+            </div>
+            <div class="employee-contribution-2">
+              <h3>Employee Contribution</h3>
+              <p>8.4%</p>
+            </div>
+            <div class="interest-rate">
+              <h3>Interest Rate</h3>
+              <p>5%</p>
+            </div>
+            <div class="button-2">
+              <a href="#" class="btn">Update</a>
+            </div>
+            <div class="docs">
+              <h3>View Help Docs <i class="fa-solid fa-caret-right"></i></h3>
+            </div>
+          </div>
+        </div>
+        <div class="last-content-last">
+          <div class="pakka-last">
+            <div class="r-you">
+              <h3>Are you considering a</h3>
+            </div>
+            <div class="housing">
+              <h3>Housing Advance?</h3>
+            </div>
+            <p class="limited">Limited time reduced interest</p>
+            <p class="last-link">Learn More <i class="fa-solid fa-caret-right"></i></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      let number = document.getElementById("number");
+      let counter = 0;
+      setInterval(() => {
+        if (counter == 78) {
+          clearInterval();
+        } else {
+          counter += 1;
+          number.innerHTML = counter + "%";
+        }
+      }, 25);
+    </script>
+    <script>
+      let number1 = document.getElementById("number-1");
+      let counter1 = 0;
+      setInterval(() => {
+        if (counter1 == 95) {
+          clearInterval();
+        } else {
+          counter1 += 1;
+          number1.innerHTML = counter1 + "%";
+        }
+      }, 20);
+    </script>
+    <script>
+      let number2 = document.getElementById("number-2");
+      let counter2 = 0;
+      setInterval(() => {
+        if (counter2 == 59) {
+          clearInterval();
+        } else {
+          counter2 += 1;
+          number2.innerHTML = counter2 + "%";
+        }
+      }, 32);
+    </script>
+    <script>
+      var slider = document.getElementById("slider-1");
+      var label = document.getElementById("label-1");
+      label.innerHTML = slider.value + "%";
+      slider.style.background = "linear-gradient(90deg, blue 12%, #ebe8e8 0%)";
+
+      slider.oninput = function () {
+        label.innerHTML = slider.value + "%";
+        slider.style.background =
+          "linear-gradient(90deg, blue " + slider.value + "%, #ebe8e8 0%)";
+      };
+    </script>
+    <script>
+      var slider2 = document.getElementById("slider-2");
+      var label2 = document.getElementById("label-2");
+      label2.innerHTML = slider2.value;
+      slider2.style.background = "linear-gradient(90deg, blue 65%, #ebe8e8 0%)";
+
+      slider2.oninput = function () {
+        label2.innerHTML = slider2.value;
+        slider2.style.background =
+          "linear-gradient(90deg, blue " + slider2.value + "%, #ebe8e8 0%)";
+      };
+    </script>
+  </body>
+</html>
